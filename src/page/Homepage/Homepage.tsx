@@ -7,6 +7,7 @@ import Header from '../../Component/Header/Header';
 import MainContent from '../../Component/MainContent/MainContent';
 import { Context } from '../..';
 import { useNavigate } from 'react-router-dom';
+import Loginpage from '../Loginpage/Loginpage';
 
 
 
@@ -31,7 +32,9 @@ const Homepage:FC = () => {
     }
 
     if (!store.isAuth) {
-        navigate('/login')
+        return(
+            <Loginpage />
+        )
     } 
 
     return (
