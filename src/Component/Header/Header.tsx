@@ -38,6 +38,10 @@ const Header:FC<HeaderInterface> = ({InterfaceObj}) => {
                 return (
                     <BackBtn />
                 )
+            case 'Datalore':
+                return (
+                    <BackBtn />
+                )
         }
     }
 
@@ -47,8 +51,8 @@ const Header:FC<HeaderInterface> = ({InterfaceObj}) => {
                 return (
                     <>
                         <Nav className="me-auto">
-                            {/* <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#features">Features</Nav.Link>
+                            <Nav.Link onClick={() => navigate('/datalore')}>База знаний</Nav.Link>
+                            {/* <Nav.Link href="#features">Features</Nav.Link>
                             <Nav.Link href="#pricing"></Nav.Link> */}
                         </Nav>
                     </>
@@ -68,7 +72,7 @@ const Header:FC<HeaderInterface> = ({InterfaceObj}) => {
         <>
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container>
-                    <Navbar.Brand href="#home"><a><img src={logo} width='50px' className='me-3' /></a></Navbar.Brand>
+                    <Navbar.Brand onClick={() => navigate('/')}><a><img src={logo} width='50px' className='me-3' /></a></Navbar.Brand>
                     {returnLinkList(InterfaceObj.pageName)}
 
                     {returnHeaderBtn(InterfaceObj.pageName)}

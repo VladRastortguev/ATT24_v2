@@ -17,8 +17,8 @@ export default class AuthService {
         return $api.post('/logout')
     }   
 
-    static async setNewTask(obj: object): Promise<AxiosResponse<itilNewtaskModel>> {
-        return $api.post<itilNewtaskModel>('/settask', obj)
+    static async setNewTask(obj: object, email: string): Promise<AxiosResponse<itilNewtaskModel>> {
+        return $api.post<itilNewtaskModel>(`/settask/${email}`, obj)
     }
 
     static async setNewComment(obj: object, uid: string, tasktype: string): Promise<AxiosResponse<commentModel>> {

@@ -150,7 +150,7 @@ const CreateTex:FC = () => {
     store.setLoading(true)
 
     try {
-        const res = AuthService.setNewTask(taskObj)
+        const res = AuthService.setNewTask(taskObj, String(localStorage.getItem('userEmail')))
 
         console.log(res);
     } catch (e) {
