@@ -154,7 +154,7 @@ const Create1C:FC= () => {
         try {
             store.setLoading(true)
 
-            const res = AuthService.setNewTask(taskObj)
+            const res = AuthService.setNewTask(taskObj, String(localStorage.getItem('userEmail')))
 
             console.log(res);
         } catch (e) {

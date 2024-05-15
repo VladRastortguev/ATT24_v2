@@ -65,7 +65,7 @@ const CreateAnonym:FC = () => {
         store.setLoading(true)
     
         try {
-            const res = AuthService.setNewTask(taskObj)
+            const res = AuthService.setNewTask(taskObj, 'Аноним')
     
             console.log(res);
         } catch (e) {
