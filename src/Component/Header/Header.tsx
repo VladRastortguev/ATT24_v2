@@ -36,7 +36,8 @@ const Header:FC<HeaderInterface> = ({InterfaceObj}) => {
                 )
             case 'Loginpage':
                 return (
-                    <BackBtn />
+                    // <BackBtn />
+                    null
                 )
             case 'Datalore':
                 return (
@@ -61,7 +62,7 @@ const Header:FC<HeaderInterface> = ({InterfaceObj}) => {
                 return (
                     <>
                         <Nav className="me-auto">
-                            <Nav.Link onClick={() => navigate('/')}>Home</Nav.Link>
+                            {/* <Nav.Link onClick={() => navigate('/')}>Home</Nav.Link> */}
                         </Nav>
                     </>
                 )
