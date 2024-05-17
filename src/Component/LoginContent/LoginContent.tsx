@@ -33,6 +33,15 @@ const LoginContent:FC = () => {
         body.style.overflow = 'hidden'
     }
 
+    async function validationPasswordLenght() {
+        if (String(passwordReg).length < 5) {
+            alert('Длина пароля должна составлять не меньше 5')
+            return 2;
+        } else {
+            return 1;
+        }
+    }
+
     async function setLocalUsername(email:string) {
         const userRes = await UserService.getItilUser()
 
@@ -42,7 +51,7 @@ const LoginContent:FC = () => {
                 localStorage.setItem('UserUID', item.uid)
                 return                    
             }
-        })
+        })        
     }
 
     async function setLocalCompany() {
@@ -61,7 +70,7 @@ const LoginContent:FC = () => {
             localStorage.setItem('userEmail', email)
 
             await setLocalUsername(email)
-            // await setLocalCompany()
+            await setLocalCompany()
 
             navigate('/')
         } else {
@@ -70,14 +79,21 @@ const LoginContent:FC = () => {
     }
 
     async function checkNormalizeReg() {
-        const res = await store.registration(emailReg, passwordReg)
+        let validationRegIndex = await validationPasswordLenght()
+        
+        if (validationRegIndex == 1) {
+            const res = await store.registration(emailReg, passwordReg)
 
-        if (String(res) == '200') { 
-            localStorage.setItem('userEmail', emailReg)
-            navigate('/')
-        } else {
-            alert('Неправильный логин или пароль!')
-        }
+            if (String(res) == '200') { 
+                localStorage.setItem('userEmail', emailReg)
+                navigate('/')
+            } else {
+                alert('Неправильный логин или пароль!')
+            }
+        } else if (validationRegIndex == 2) {
+            setPasswordReg('')
+            return
+        }        
     }
     
     const customTheme = (outerTheme: Theme) => createTheme({
