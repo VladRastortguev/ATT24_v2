@@ -100,8 +100,14 @@ const DataloreContent:FC = () => {
                                     <Accordion.Item eventKey='4'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Заказ и резервирование товара, под заказ наряд</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
-                                            <a target='_blank' href={`Datalorepdf/${Заказ_И_Резирвирование_ЗН}`}>Просмотреть</a>
-                                            <a className='ms-3' download href={`Datalorepdf/${Заказ_И_Резирвирование_ЗН}`}>Скачать</a>
+                                           <div>
+                                                <p className='mb-3 ms-2'>Руководство пользователя по Заказы и резервированию товаров, из «Заявки на ремонт», из «Заказ-наряда»</p>
+
+                                                <div>
+                                                    <a className='ms-2'  target='_blank' href={`Datalorepdf/${Заказ_И_Резирвирование_ЗН}`}>Просмотреть</a>
+                                                    <a className='ms-3' download href={`Datalorepdf/${Заказ_И_Резирвирование_ЗН}`}>Скачать</a>
+                                                </div>
+                                           </div>
                                         </Accordion.Body>
                                     </Accordion.Item>
 
