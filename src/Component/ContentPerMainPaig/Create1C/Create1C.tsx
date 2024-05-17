@@ -15,6 +15,10 @@ import { Context } from '../../..'
 import AuthService from '../../../services/AuthService'
 import { TaskFunction } from '../Interface/TaskFunction'
 import UserService from '../../../services/UserService'
+import UserNameCreate1c from '../PodComponent/CreateAccount1c/UserNameCreate1c'
+import UserCompanyCreate1c from '../PodComponent/CreateAccount1c/UserCompanyCreate1c'
+import UserEmailCreate1c from '../PodComponent/CreateAccount1c/UserEmailCreate1c'
+import UserJobtitelCreate1c from '../PodComponent/CreateAccount1c/UserJobtitelCreate1c'
 
 const Create1C:FC= () => {
     const [taskService, setTaskService] = useState('')
@@ -28,6 +32,11 @@ const Create1C:FC= () => {
     const [taskUrgency, setTaskUrgency] = useState('')
     const [taskUrgencyDescr, setTaskUrgencyDescr] = useState('')
     const [taskComment, setTaskComment] = useState('')
+
+    const [userNameCreate1c, setUserNameCreate1c] = useState('')
+    const [userCompanyCreate1c, setUserCompanyCreate1c] = useState('')
+    const [userEmailCreate1c, setUserEmailCreate1c] = useState('')
+    const [userJobtitelCreate1c, setUserJobtitelCreate1c] = useState('')
 
     const { store } = useContext(Context)
 
@@ -95,6 +104,24 @@ const Create1C:FC= () => {
         setTaskComment(newState)
     }
 
+
+
+    const handleSetUserNameCreate1c = (newState: string) => {
+        setUserNameCreate1c(newState)
+    }
+
+    const handleSetUserCompanyCreate1c = (newState: string) => {
+        setUserCompanyCreate1c(newState)
+    }
+
+    const handleSetUserEmailCreate1c = (newState: string) => {
+        setUserEmailCreate1c(newState)
+    }
+
+    const handleSetUserJobtitelCreate1c = (newState: string) => {
+        setUserJobtitelCreate1c(newState)
+    }
+ 
     const InterfaceObj = {
         changeTaskName: handleSetTaskName,
         changeUserName: handleSetUserName,
@@ -114,6 +141,17 @@ const Create1C:FC= () => {
         taskUrgency: taskUrgency,
         taskUrgencyDescr: taskUrgencyDescr,
         taskComment: taskComment
+    }
+
+    const InterfaceObjCreate1c = {
+        changeUserNameCreate1c: handleSetUserNameCreate1c,
+        changeUserCompanyCreate1c: handleSetUserCompanyCreate1c,
+        changeUserEmailCreate1c: handleSetUserEmailCreate1c,
+        changeUserJobtitelCreate1c: handleSetUserJobtitelCreate1c,
+        userName: userNameCreate1c,
+        userCompany: userCompanyCreate1c,
+        userEmail: userEmailCreate1c,
+        userJobtitel: userJobtitelCreate1c
     }
 
     async function setNewTask() {
@@ -204,8 +242,9 @@ const Create1C:FC= () => {
                                 <option></option>
                                 <option value="Доработка 1С">Доработка 1С</option>
                                 <option value="Разработка 1С">Разработка 1С</option>
+                                <option value="Создание учетной записи АА6">Создание учетной записи АА6</option>
                             </Form.Select>
-                        </Form.Group>            
+                        </Form.Group>     
 
                         <TaskName InterfaceObj={InterfaceObj} />
                         
@@ -220,6 +259,19 @@ const Create1C:FC= () => {
                         )}
                         <TaskInfluence InterfaceObj={InterfaceObj} />   
                         <TaskUrgency InterfaceObj={InterfaceObj} />
+
+                        {taskService == 'Создание учетной записи АА6' ? (
+                            <>
+                                <UserNameCreate1c InterfaceObj={InterfaceObjCreate1c} />
+                                <UserCompanyCreate1c InterfaceObj={InterfaceObjCreate1c}/>  
+                                <UserEmailCreate1c InterfaceObj={InterfaceObjCreate1c} />
+                                <UserJobtitelCreate1c InterfaceObj={InterfaceObjCreate1c} />                        
+                            </>
+                        ) : (
+                            null
+                        )}
+
+
                         <TaskComment InterfaceObj={InterfaceObj}/>
                         
                         <Button onClick={() => {
