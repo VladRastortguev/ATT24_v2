@@ -53,7 +53,8 @@ const DataloreContent:FC = () => {
     const Инструкция_ОПА = pdf('instruction_OPA.pdf')
     const Инструкция_По_АА6_Том_1 = pdf('Автосалон 6_1_2023_08_04_том1.pdf')
     const Инструкция_По_АА6_Том_2 = pdf('Автосалон 6_1_2023_08_04_том2.pdf')
-    const Инструкция_По_АА6_Том_3 = pdf('Автосалон 6_1_2023_08_04_том3.pdf') 
+    const Инструкция_По_АА6_Том_3 = pdf('Автосалон 6_1_2023_08_04_том3.pdf')
+    const АрендаАвто = pdf('rukovodstvo_polzovatelya_alfa_avto_arenda_avtomobiley_6.pdf')
     
     return (
         <>
@@ -112,6 +113,20 @@ const DataloreContent:FC = () => {
                                     </Accordion.Item>
 
                                     <Accordion.Item eventKey='5'>
+                                        <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Аренда автомобиля</Accordion.Header>
+                                        <Accordion.Body className='VR_Datalore_ButtonGroup'>
+                                           <div>
+                                                <p className='mb-3 ms-2'>Руководство пользователя по Аренде автомобилей</p>
+
+                                                <div>
+                                                    <a className='ms-2'  target='_blank' href={`Datalorepdf/${АрендаАвто}`}>Просмотреть</a>
+                                                    <a className='ms-3' download href={`Datalorepdf/${АрендаАвто}`}>Скачать</a>
+                                                </div>
+                                           </div>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+
+                                    <Accordion.Item eventKey='6'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Инструкция по работе с бесплатными заказ нарядами</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Бесплатные_Заказ_Наряды}`}>Просмотреть</a>
@@ -119,7 +134,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='6'>
+                                    <Accordion.Item eventKey='7'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Кредитные программы</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Кредитные_программы}`}>Просмотреть</a>
@@ -127,7 +142,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='7'>
+                                    <Accordion.Item eventKey='8'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Выдача автобиля после обслуживания</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Выдача_Авто_После_Обслуживания}`}>Просмотреть</a>
@@ -135,7 +150,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='8'>
+                                    <Accordion.Item eventKey='9'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Выдача SST</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Выдача_SST}`}>Просмотреть</a>
@@ -143,7 +158,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='9'>
+                                    <Accordion.Item eventKey='10'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Выставление гарантийных требований</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Выставление_Гарантийных_Требований}`}>Просмотреть</a>
@@ -151,7 +166,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='10'>
+                                    <Accordion.Item eventKey='11'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Качественный ремонт с первого раза</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Качественный_Ремонта_С_Первого_Раза}`}>Просмотреть</a>
@@ -159,7 +174,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='11'>
+                                    <Accordion.Item eventKey='12'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Контроль ам ожидающих ремонта</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Контроль_Ам_Находящихся_Ожидающих_Ремонта}`}>Просмотреть</a>
@@ -167,7 +182,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='12'>
+                                    <Accordion.Item eventKey='13'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Контроль хода работ</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Контроль_Хода_Работ}`}>Просмотреть</a>
@@ -175,7 +190,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='13'>
+                                    <Accordion.Item eventKey='14'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Мойка и уборки автомобиля на СО</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Мойка_И_Уборки_автомобиля_На_СО}`}>Просмотреть</a>
@@ -183,7 +198,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>                      
 
-                                    <Accordion.Item eventKey='14'>
+                                    <Accordion.Item eventKey='15'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Написание запросов на тех поддержку RSR</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Написание_Запросов_На_Тех_Поддержку_RSR}`}>Просмотреть</a>
@@ -191,7 +206,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='15'>
+                                    <Accordion.Item eventKey='16'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Ознакомление с сервисными бюллетенями и тех информацией</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Ознакомление_С_Сервисными_Бюллетенями_И_Тех_Информацией}`}>Просмотреть</a>
@@ -199,7 +214,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='16'>
+                                    <Accordion.Item eventKey='17'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Отправка з.ч. в ТМР</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Отправка_Зч_В_ТМР}`}>Просмотреть</a>
@@ -207,7 +222,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='17'>
+                                    <Accordion.Item eventKey='18'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Отслеживание и оповещение клиента о поступлении з.ч.</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Отслеживание_И_Оповещение_Клиента_О_Поступлении_Зч}`}>Просмотреть</a>
@@ -215,7 +230,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='18'>
+                                    <Accordion.Item eventKey='19'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Подготовка у визиту на ТО и ТР</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Подготовка_К_Визиту_На_ТО_И_ТР}`}>Просмотреть</a>
@@ -223,7 +238,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='19'>
+                                    <Accordion.Item eventKey='20'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Порядок проведения кругового осмотра авто при приемке</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Порядок_Проведения_Кругового_Осмотра_Авто_При_Приемке}`}>Просмотреть</a>
@@ -231,7 +246,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='20'>
+                                    <Accordion.Item eventKey='21'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Предварительная запись на ТО и ТР</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Предварительная_Запись_На_ТО_И_ТР}`}>Просмотреть</a>
@@ -239,7 +254,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='21'>
+                                    <Accordion.Item eventKey='22'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Предварительный подбор и выдачи запасных частей</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Предварительный_Подбор_И_Выдачи_Запасных_Частей}`}>Просмотреть</a>
@@ -247,7 +262,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='22'>
+                                    <Accordion.Item eventKey='23'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Прием автомобиля клиента на ТО и ТР</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Прием_Автомобиля_Клиента_На_ТО_И_ТР}`}>Просмотреть</a>
@@ -255,7 +270,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='23'>
+                                    <Accordion.Item eventKey='24'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Прием и оприходование з.ч.</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Прием_И_Оприходование_ЗЧ}`}>Просмотреть</a>
@@ -263,7 +278,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='24'>
+                                    <Accordion.Item eventKey='25'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Проведения контроля качества</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Проведения_Контроля_Качества}`}>Просмотреть</a>
@@ -271,7 +286,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='25'>
+                                    <Accordion.Item eventKey='26'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Проведение спец сервисных компаний</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Проведения_Спец_Сервисных_Компаний_NEW}`}>Просмотреть</a>
@@ -279,7 +294,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='26'>
+                                    <Accordion.Item eventKey='27'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Продажа заказ и выдача з.ч. клиенту</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Продажа_Заказ_И_Выдача_ЗЧ_Клиенту}`}>Просмотреть</a>
@@ -287,7 +302,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='27'>
+                                    <Accordion.Item eventKey='28'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Работы с рекламациями и повторными ремонтами</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Работы_С_Рекламациями_И_Повторными_Ремонтами}`}>Просмотреть</a>
@@ -295,7 +310,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='28'>
+                                    <Accordion.Item eventKey='29'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Расчет первоначального запаса деталей</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Расчет_Первоначального_Запаса_Деталей}`}>Просмотреть</a>
@@ -303,7 +318,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='29'>
+                                    <Accordion.Item eventKey='30'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Система распределения резервов</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Система_Распределения_Резервов}`}>Просмотреть</a>
@@ -311,7 +326,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item> 
 
-                                    <Accordion.Item eventKey='30'>
+                                    <Accordion.Item eventKey='31'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Согласование с клиентами доп. работ</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Согласование_С_Клиентами_Доп_работ}`}>Просмотреть</a>
@@ -319,7 +334,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='31'>
+                                    <Accordion.Item eventKey='32'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Формирования и загрузка отчета VOC</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Формирования_И_Загрузка_Отчета_VOC}`}>Просмотреть</a>
@@ -327,7 +342,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='32'>
+                                    <Accordion.Item eventKey='33'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Формирования и размещения заказов запасных частей типа VOR</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Формирования_И_Размещения_Заказов_Запасных_Частей_Типа_VOR}`}>Просмотреть</a>
@@ -335,7 +350,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='33'>
+                                    <Accordion.Item eventKey='34'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Хранение и обслуживание АКБ</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Хранение_И_Обслуживание_АКБ}`}>Просмотреть</a>
@@ -343,7 +358,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='34'>
+                                    <Accordion.Item eventKey='35'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Хранение запасных частей и агрегатов</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Хранение_Запасных_Частей_И_Агрегатов}`}>Просмотреть</a>
@@ -351,7 +366,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='35'>
+                                    <Accordion.Item eventKey='36'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Хранение и утилизации запасных частей по гарантии</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Хранение_И_Утилизации_Запасных_Частей_По_Гарантии}`}>Просмотреть</a>
@@ -359,7 +374,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='36'>
+                                    <Accordion.Item eventKey='37'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>ПФ заявление покупателя</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${ПФ_Заявление_Покупателя}`}>Просмотреть</a>
@@ -367,7 +382,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='37'>
+                                    <Accordion.Item eventKey='38'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Ручное планирование</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Ручное_Планирование}`}>Просмотреть</a>
@@ -375,7 +390,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='38'>
+                                    <Accordion.Item eventKey='39'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Создание сотрудника и влияние реквизитов</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Создание_Сотрудника_И_Влияние_Реквизитов}`}>Просмотреть</a>
@@ -383,7 +398,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='39'>
+                                    <Accordion.Item eventKey='40'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Установка цен</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${установка_Цен}`}>Просмотреть</a>
@@ -391,7 +406,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='40'>
+                                    <Accordion.Item eventKey='41'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Инструкция ОПА</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Инструкция_ОПА}`}>Просмотреть</a>
@@ -399,7 +414,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item>
 
-                                    <Accordion.Item eventKey='41'>
+                                    <Accordion.Item eventKey='42'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Инструкция по АА6 том 1</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Инструкция_По_АА6_Том_1}`}>Просмотреть</a>
@@ -407,7 +422,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item> 
 
-                                    <Accordion.Item eventKey='42'>
+                                    <Accordion.Item eventKey='43'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Инструкция по АА6 том 2</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Инструкция_По_АА6_Том_2}`}>Просмотреть</a>
@@ -415,7 +430,7 @@ const DataloreContent:FC = () => {
                                         </Accordion.Body>
                                     </Accordion.Item> 
 
-                                    <Accordion.Item eventKey='43'>
+                                    <Accordion.Item eventKey='44'>
                                         <Accordion.Header className='VR_Datalore_Header VR_Accordion_Item'>Инструкция по АА6 том 3</Accordion.Header>
                                         <Accordion.Body className='VR_Datalore_ButtonGroup'>
                                             <a target='_blank' href={`Datalorepdf/${Инструкция_По_АА6_Том_3}`}>Просмотреть</a>
