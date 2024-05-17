@@ -29,9 +29,12 @@ const LoginContent:FC = () => {
 
     const body = document.body
 
-    if (String(location.pathname) == '/login') {
+
+    if (String(location.pathname) == '/' && !store.isAuth) {
         body.style.overflow = 'hidden'
+        body.style.height = '100%'
     }
+
 
     async function validationPasswordLenght() {
         if (String(passwordReg).length < 5) {
@@ -176,6 +179,8 @@ const LoginContent:FC = () => {
     return (
         
         <div className='VR_loginContent_AllHeader'>
+            <div className='VR_loginContent_NoAllHeader'>
+
             <div className='VR_loginContainer'>
                 <div className='VR_loginPodContainer'>                
                     <div className='VR_loginCheckBox'>
@@ -251,6 +256,7 @@ const LoginContent:FC = () => {
                         </div>
                     )}
 
+                </div>
                 </div>
             </div>
         </div>
